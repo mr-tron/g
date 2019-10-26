@@ -22,3 +22,24 @@ MaxWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
 MinXXX(slice []T) (T, error)             # intX, uintX, floatX types
 MinWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
 ```
+
+## Example
+
+```go
+package main
+import (
+    "github.com/mr-tron/g"  
+    "fmt"
+)
+
+func main() {
+    prices := []uint64{15999, 12000, 13490, 99999}
+    outTransactions := []uint64{500, 2900, 12000, 980, 500}
+    lowestPrice, err  := g.MinUint64(prices)
+    if err != nil {
+        fmt.Println("Nobody sells giant dildos. Sorry")
+        return
+    }
+    fmt.Printf("- Did we buy giant dildo on lowest price?\n- %v", g.Uint64InSlice(lowestPrice, outTransactions))
+}
+```
