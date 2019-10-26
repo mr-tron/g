@@ -17,9 +17,9 @@ rune, byte # aliases for int32 and uint8
 All supported functions:
 ```
 XXXInSlice(value T, slice []T) bool      # all types
-MaxXXX(slice []T) (T, error)             # intX, uintX, floatX types
+MaxXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
 MaxWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
-MinXXX(slice []T) (T, error)             # intX, uintX, floatX types
+MinXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
 MinWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
 ```
 
@@ -35,7 +35,7 @@ import (
 func main() {
     prices := []uint64{15999, 12000, 13490, 99999}
     outTransactions := []uint64{500, 2900, 12000, 980, 500}
-    lowestPrice, err  := g.MinUint64(prices)
+    lowestPrice, err  := g.MinUint64InSlice(prices)
     if err != nil {
         fmt.Println("Nobody sells giant dildos. Sorry")
         return

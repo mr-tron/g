@@ -1,6 +1,6 @@
 package g
 
-func MaxInt(slice []int) (int, error) {
+func MaxIntInSlice(slice []int) (int, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -26,7 +26,7 @@ func MaxIntWithDefault(slice []int, d int) int {
 	return max
 }
 
-func MaxInt8(slice []int8) (int8, error) {
+func MaxInt8InSlice(slice []int8) (int8, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -52,7 +52,7 @@ func MaxInt8WithDefault(slice []int8, d int8) int8 {
 	return max
 }
 
-func MaxInt16(slice []int16) (int16, error) {
+func MaxInt16InSlice(slice []int16) (int16, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -78,7 +78,7 @@ func MaxInt16WithDefault(slice []int16, d int16) int16 {
 	return max
 }
 
-func MaxInt32(slice []int32) (int32, error) {
+func MaxInt32InSlice(slice []int32) (int32, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -104,7 +104,7 @@ func MaxInt32WithDefault(slice []int32, d int32) int32 {
 	return max
 }
 
-func MaxInt64(slice []int64) (int64, error) {
+func MaxInt64InSlice(slice []int64) (int64, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -130,7 +130,7 @@ func MaxInt64WithDefault(slice []int64, d int64) int64 {
 	return max
 }
 
-func MaxUint(slice []uint) (uint, error) {
+func MaxUintInSlice(slice []uint) (uint, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -156,7 +156,7 @@ func MaxUintWithDefault(slice []uint, d uint) uint {
 	return max
 }
 
-func MaxUint8(slice []uint8) (uint8, error) {
+func MaxUint8InSlice(slice []uint8) (uint8, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -182,7 +182,7 @@ func MaxUint8WithDefault(slice []uint8, d uint8) uint8 {
 	return max
 }
 
-func MaxUint16(slice []uint16) (uint16, error) {
+func MaxUint16InSlice(slice []uint16) (uint16, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -208,7 +208,7 @@ func MaxUint16WithDefault(slice []uint16, d uint16) uint16 {
 	return max
 }
 
-func MaxUint32(slice []uint32) (uint32, error) {
+func MaxUint32InSlice(slice []uint32) (uint32, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -234,7 +234,7 @@ func MaxUint32WithDefault(slice []uint32, d uint32) uint32 {
 	return max
 }
 
-func MaxUint64(slice []uint64) (uint64, error) {
+func MaxUint64InSlice(slice []uint64) (uint64, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -260,7 +260,7 @@ func MaxUint64WithDefault(slice []uint64, d uint64) uint64 {
 	return max
 }
 
-func MaxFloat32(slice []float32) (float32, error) {
+func MaxFloat32InSlice(slice []float32) (float32, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -286,7 +286,7 @@ func MaxFloat32WithDefault(slice []float32, d float32) float32 {
 	return max
 }
 
-func MaxFloat64(slice []float64) (float64, error) {
+func MaxFloat64InSlice(slice []float64) (float64, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}

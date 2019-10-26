@@ -5,36 +5,36 @@ import "testing"
 func TestMaxInt(t *testing.T) {
 	var r int
 	var err error
-	_, err = MaxInt([]int{})
+	_, err = MaxIntInSlice([]int{})
 	if err == nil {
 		t.Fatal("should be error")
 	}
-	_, err = MaxInt(nil)
+	_, err = MaxIntInSlice(nil)
 	if err == nil {
 		t.Fatal("should be error")
 	}
-	r, err = MaxInt([]int{1, 2, 3})
+	r, err = MaxIntInSlice([]int{1, 2, 3})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if r != 3 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r, err = MaxInt([]int{3, 2, 1})
+	r, err = MaxIntInSlice([]int{3, 2, 1})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if r != 3 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r, err = MaxInt([]int{1, -2, 3})
+	r, err = MaxIntInSlice([]int{1, -2, 3})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if r != 3 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r, err = MaxInt([]int{-1, -2, -3})
+	r, err = MaxIntInSlice([]int{-1, -2, -3})
 	if err != nil {
 		t.Fatal(err)
 	}

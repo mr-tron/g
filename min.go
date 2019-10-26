@@ -1,6 +1,6 @@
 package g
 
-func MinInt(slice []int) (int, error) {
+func MinIntInSlice(slice []int) (int, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -26,7 +26,7 @@ func MinIntWithDefault(slice []int, d int) int {
 	return min
 }
 
-func MinInt8(slice []int8) (int8, error) {
+func MinInt8InSlice(slice []int8) (int8, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -52,7 +52,7 @@ func MinInt8WithDefault(slice []int8, d int8) int8 {
 	return min
 }
 
-func MinInt16(slice []int16) (int16, error) {
+func MinInt16InSlice(slice []int16) (int16, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -78,7 +78,7 @@ func MinInt16WithDefault(slice []int16, d int16) int16 {
 	return min
 }
 
-func MinInt32(slice []int32) (int32, error) {
+func MinInt32InSlice(slice []int32) (int32, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -104,7 +104,7 @@ func MinInt32WithDefault(slice []int32, d int32) int32 {
 	return min
 }
 
-func MinInt64(slice []int64) (int64, error) {
+func MinInt64InSlice(slice []int64) (int64, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -130,7 +130,7 @@ func MinInt64WithDefault(slice []int64, d int64) int64 {
 	return min
 }
 
-func MinUint(slice []uint) (uint, error) {
+func MinUintInSlice(slice []uint) (uint, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -156,7 +156,7 @@ func MinUintWithDefault(slice []uint, d uint) uint {
 	return min
 }
 
-func MinUint8(slice []uint8) (uint8, error) {
+func MinUint8InSlice(slice []uint8) (uint8, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -182,7 +182,7 @@ func MinUint8WithDefault(slice []uint8, d uint8) uint8 {
 	return min
 }
 
-func MinUint16(slice []uint16) (uint16, error) {
+func MinUint16InSlice(slice []uint16) (uint16, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -208,7 +208,7 @@ func MinUint16WithDefault(slice []uint16, d uint16) uint16 {
 	return min
 }
 
-func MinUint32(slice []uint32) (uint32, error) {
+func MinUint32InSlice(slice []uint32) (uint32, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -234,7 +234,7 @@ func MinUint32WithDefault(slice []uint32, d uint32) uint32 {
 	return min
 }
 
-func MinUint64(slice []uint64) (uint64, error) {
+func MinUint64InSlice(slice []uint64) (uint64, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -260,7 +260,7 @@ func MinUint64WithDefault(slice []uint64, d uint64) uint64 {
 	return min
 }
 
-func MinFloat32(slice []float32) (float32, error) {
+func MinFloat32InSlice(slice []float32) (float32, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}
@@ -286,7 +286,7 @@ func MinFloat32WithDefault(slice []float32, d float32) float32 {
 	return min
 }
 
-func MinFloat64(slice []float64) (float64, error) {
+func MinFloat64InSlice(slice []float64) (float64, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
 	}

@@ -5,36 +5,36 @@ import "testing"
 func TestMinInt(t *testing.T) {
 	var r int
 	var err error
-	_, err = MinInt([]int{})
+	_, err = MinIntInSlice([]int{})
 	if err == nil {
 		t.Fatal("should be error")
 	}
-	_, err = MinInt(nil)
+	_, err = MinIntInSlice(nil)
 	if err == nil {
 		t.Fatal("should be error")
 	}
-	r, err = MinInt([]int{1, 2, 3})
+	r, err = MinIntInSlice([]int{1, 2, 3})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if r != 1 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r, err = MinInt([]int{3, 2, 1})
+	r, err = MinIntInSlice([]int{3, 2, 1})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if r != 1 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r, err = MinInt([]int{3, -2, 1})
+	r, err = MinIntInSlice([]int{3, -2, 1})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if r != -2 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r, err = MinInt([]int{-1, -2, -3})
+	r, err = MinIntInSlice([]int{-1, -2, -3})
 	if err != nil {
 		t.Fatal(err)
 	}
