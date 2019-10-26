@@ -17,8 +17,10 @@ rune, byte # aliases for int32 and uint8
 All supported functions:
 ```
 XXXInSlice(value T, slice []T) bool      # all types
+MaxXXX(a, b T) T                         # intX, uintX, floatX types
 MaxXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
 MaxWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
+MinXXX(a, b T) T                         # intX, uintX, floatX types
 MinXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
 MinWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
 ```
