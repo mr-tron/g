@@ -1,5 +1,9 @@
 # G - general framework for go
 
+[![GoDoc](https://godoc.org/github.com/mr-tron/g?status.svg)](https://godoc.org/github.com/mr-tron/g)  [![Go Report Card](https://goreportcard.com/badge/github.com/mr-tron/g)](https://goreportcard.com/report/github.com/mr-tron/g)
+[![Used By](https://sourcegraph.com/github.com/mr-tron/g/-/badge.svg)](https://sourcegraph.com/github.com/mr-tron/g?badge)
+
+
 All built in golang types:
 ```
 bool
