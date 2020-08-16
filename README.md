@@ -7,6 +7,7 @@
 All built in golang types:
 ```
 bool
+string
 int8, int16, int32, int64, int
 uint8, uint16, uint32, uint64, uint
 float32, float64
@@ -23,6 +24,7 @@ MaxWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
 MinXXX(a, b T) T                         # intX, uintX, floatX types
 MinXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
 MinWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
+Pxxx(v T) *T                             # all types
 ```
 
 ## Example
