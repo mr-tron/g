@@ -24,6 +24,7 @@ MaxWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
 MinXXX(a, b T) T                         # intX, uintX, floatX types
 MinXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
 MinWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
+UniqXXX(slice []T) []T                   # all types
 Pxxx(v T) *T                             # all types
 ```
 
