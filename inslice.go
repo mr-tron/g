@@ -1,5 +1,7 @@
 package g
 
+import "time"
+
 func IntInSlice(v int, slice []int) bool {
 	for i := range slice {
 		if slice[i] == v {
@@ -156,6 +158,15 @@ func BoolInSlice(v bool, slice []bool) bool {
 func StringInSlice(v string, slice []string) bool {
 	for i := range slice {
 		if slice[i] == v {
+			return true
+		}
+	}
+	return false
+}
+
+func TimeInSlice(v time.Time, slice []time.Time) bool {
+	for i := range slice {
+		if slice[i].Equal(v) {
 			return true
 		}
 	}

@@ -1,6 +1,9 @@
 package g
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func TestInSlice(t *testing.T) {
 	if !IntInSlice(1, []int{1, 2, 3}) {
@@ -40,6 +43,12 @@ func TestInSlice(t *testing.T) {
 		t.Fatal("should be not found")
 	}
 	if !Complex64InSlice(0.3+0.4i, []complex64{1 + 2i, 0.3 + 0.4i}) {
+		t.Fatal("should be found")
+	}
+	if TimeInSlice(time.Now(), []time.Time{}) {
+		t.Fatal("should be not found")
+	}
+	if !TimeInSlice(time.Unix(1232141414, 32423423), []time.Time{time.Now(), time.Unix(1232141414, 32423423), time.Unix(243254365, 32452)}) {
 		t.Fatal("should be found")
 	}
 }

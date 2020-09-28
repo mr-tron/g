@@ -1,5 +1,7 @@
 package g
 
+import "time"
+
 func MinIntInSlice(slice []int) (int, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
@@ -312,6 +314,32 @@ func MinFloat64WithDefault(slice []float64, d float64) float64 {
 	return min
 }
 
+func MinTimeInSlice(slice []time.Time) (time.Time, error) {
+	if len(slice) == 0 {
+		return time.Time{}, EmptySlice
+	}
+	min := slice[0]
+	for i := range slice {
+		if slice[i].Before(min) {
+			min = slice[i]
+		}
+	}
+	return min, nil
+}
+
+func MinTimeWithDefault(slice []time.Time, d time.Time) time.Time {
+	min := d
+	if len(slice) != 0 {
+		min = slice[0]
+	}
+	for i := range slice {
+		if slice[i].Before(min) {
+			min = slice[i]
+		}
+	}
+	return min
+}
+
 func MinInt(a, b int) int {
 	if a < b {
 		return a
@@ -380,6 +408,12 @@ func MinFloat32(a, b float32) float32 {
 }
 func MinFloat64(a, b float64) float64 {
 	if a < b {
+		return a
+	}
+	return b
+}
+func MinTime(a, b time.Time) time.Time {
+	if a.Before(b) {
 		return a
 	}
 	return b

@@ -1,5 +1,7 @@
 package g
 
+import "time"
+
 func Pstring(s string) *string {
 	return &s
 }
@@ -62,4 +64,8 @@ func Pcomplex64(c complex64) *complex64 {
 
 func Pcomplex128(c complex128) *complex128 {
 	return &c
+}
+
+func Ptime(t time.Time) *time.Time {
+	return &t
 }

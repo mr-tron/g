@@ -1,6 +1,9 @@
 package g
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func TestPbool(t *testing.T) {
 	b := Pbool(true)
@@ -159,5 +162,12 @@ func TestPcomplex128(t *testing.T) {
 	}
 	if *c != 2.3-4.7i {
 		t.Fatal("invalid value")
+	}
+}
+
+func TestPtime(t *testing.T) {
+	u := Ptime(time.Unix(1601271431, 832131))
+	if u == nil {
+		t.Fatal("u is nil")
 	}
 }

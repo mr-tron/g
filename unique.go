@@ -1,5 +1,7 @@
 package g
 
+import "time"
+
 func UniqBool(input []bool) []bool {
 	output := make([]bool, 0, 2)
 	counter := 0
@@ -142,6 +144,16 @@ func UniqFloat64(input []float64) []float64 {
 	output := make([]float64, 0, len(input))
 	for i := range input {
 		if !Float64InSlice(input[i], output) {
+			output = append(output, input[i])
+		}
+	}
+	return output
+}
+
+func UniqTime(input []time.Time) []time.Time {
+	output := make([]time.Time, 0, len(input))
+	for i := range input {
+		if !TimeInSlice(input[i], output) {
 			output = append(output, input[i])
 		}
 	}

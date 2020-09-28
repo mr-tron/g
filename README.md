@@ -4,7 +4,7 @@
 [![Used By](https://sourcegraph.com/github.com/mr-tron/g/-/badge.svg)](https://sourcegraph.com/github.com/mr-tron/g?badge)
 
 
-All built in golang types:
+All built-in golang types:
 ```
 bool
 string
@@ -15,15 +15,17 @@ complex64, complex128
 rune, byte # aliases for int32 and uint8
 ```
 
+Also library supports `time.Time` type
+
 All supported functions:
 ```
 XXXInSlice(value T, slice []T) bool      # all types
-MaxXXX(a, b T) T                         # intX, uintX, floatX types
-MaxXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
-MaxWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
-MinXXX(a, b T) T                         # intX, uintX, floatX types
-MinXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX types
-MinWithDeafult(slice []T, default T) T   # intX, uintX, floatX types
+MaxXXX(a, b T) T                         # intX, uintX, floatX, time.Time types
+MaxXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX, time.Time types
+MaxWithDeafult(slice []T, default T) T   # intX, uintX, floatX, time.Time types
+MinXXX(a, b T) T                         # intX, uintX, floatX, time.Time types
+MinXXXInSlice(slice []T) (T, error)      # intX, uintX, floatX, time.Time types
+MinWithDeafult(slice []T, default T) T   # intX, uintX, floatX, time.Time types
 UniqXXX(slice []T) []T                   # all types
 Pxxx(v T) *T                             # all types
 ```

@@ -1,5 +1,7 @@
 package g
 
+import "time"
+
 func MaxIntInSlice(slice []int) (int, error) {
 	if len(slice) == 0 {
 		return 0, EmptySlice
@@ -312,6 +314,32 @@ func MaxFloat64WithDefault(slice []float64, d float64) float64 {
 	return max
 }
 
+func MaxTimeWithDefault(slice []time.Time, t time.Time) time.Time {
+	max := t
+	if len(slice) != 0 {
+		max = slice[0]
+	}
+	for i := range slice {
+		if slice[i].After(max) {
+			max = slice[i]
+		}
+	}
+	return max
+}
+
+func MaxTimeInSlice(slice []time.Time) (time.Time, error) {
+	if len(slice) == 0 {
+		return time.Time{}, EmptySlice
+	}
+	max := slice[0]
+	for i := range slice {
+		if slice[i].After(max) {
+			max = slice[i]
+		}
+	}
+	return max, nil
+}
+
 func MaxInt(a, b int) int {
 	if a > b {
 		return a
@@ -380,6 +408,12 @@ func MaxFloat32(a, b float32) float32 {
 }
 func MaxFloat64(a, b float64) float64 {
 	if a > b {
+		return a
+	}
+	return b
+}
+func MaxTime(a, b time.Time) time.Time {
+	if a.After(b) {
 		return a
 	}
 	return b
