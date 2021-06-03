@@ -45,23 +45,23 @@ func TestMaxInt(t *testing.T) {
 
 func TestMaxIntWithDefault(t *testing.T) {
 	var r int
-	r = MaxIntWithDefault([]int{}, 3)
+	r = MaxIntWithDefault(3, []int{}...)
 	if r != 3 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MaxIntWithDefault(nil, 3)
+	r = MaxIntWithDefault(3)
 	if r != 3 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MaxIntWithDefault([]int{1, 2}, 3)
+	r = MaxIntWithDefault(3, 1, 2)
 	if r != 2 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MaxIntWithDefault([]int{4, 5}, 3)
+	r = MaxIntWithDefault(3, 4, 5)
 	if r != 5 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MaxIntWithDefault([]int{-4, -5}, 3)
+	r = MaxIntWithDefault(3, -4, -5)
 	if r != -4 {
 		t.Fatalf("bad result: %v", r)
 	}

@@ -15,7 +15,7 @@ func MinIntInSlice(slice []int) (int, error) {
 	return min, nil
 }
 
-func MinIntWithDefault(slice []int, d int) int {
+func MinIntWithDefault(d int, slice ...int) int {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -41,7 +41,7 @@ func MinInt8InSlice(slice []int8) (int8, error) {
 	return min, nil
 }
 
-func MinInt8WithDefault(slice []int8, d int8) int8 {
+func MinInt8WithDefault(d int8, slice ...int8) int8 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -67,7 +67,7 @@ func MinInt16InSlice(slice []int16) (int16, error) {
 	return min, nil
 }
 
-func MinInt16WithDefault(slice []int16, d int16) int16 {
+func MinInt16WithDefault(d int16, slice ...int16) int16 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -93,7 +93,7 @@ func MinInt32InSlice(slice []int32) (int32, error) {
 	return min, nil
 }
 
-func MinInt32WithDefault(slice []int32, d int32) int32 {
+func MinInt32WithDefault(d int32, slice ...int32) int32 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -119,7 +119,7 @@ func MinInt64InSlice(slice []int64) (int64, error) {
 	return min, nil
 }
 
-func MinInt64WithDefault(slice []int64, d int64) int64 {
+func MinInt64WithDefault(d int64, slice ...int64) int64 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -145,7 +145,7 @@ func MinUintInSlice(slice []uint) (uint, error) {
 	return min, nil
 }
 
-func MinUintWithDefault(slice []uint, d uint) uint {
+func MinUintWithDefault(d uint, slice ...uint) uint {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -171,7 +171,7 @@ func MinUint8InSlice(slice []uint8) (uint8, error) {
 	return min, nil
 }
 
-func MinUint8WithDefault(slice []uint8, d uint8) uint8 {
+func MinUint8WithDefault(d uint8, slice ...uint8) uint8 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -197,7 +197,7 @@ func MinUint16InSlice(slice []uint16) (uint16, error) {
 	return min, nil
 }
 
-func MinUint16WithDefault(slice []uint16, d uint16) uint16 {
+func MinUint16WithDefault(d uint16, slice ...uint16) uint16 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -223,7 +223,7 @@ func MinUint32InSlice(slice []uint32) (uint32, error) {
 	return min, nil
 }
 
-func MinUint32WithDefault(slice []uint32, d uint32) uint32 {
+func MinUint32WithDefault(d uint32, slice ...uint32) uint32 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -249,7 +249,7 @@ func MinUint64InSlice(slice []uint64) (uint64, error) {
 	return min, nil
 }
 
-func MinUint64WithDefault(slice []uint64, d uint64) uint64 {
+func MinUint64WithDefault(d uint64, slice ...uint64) uint64 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -275,7 +275,7 @@ func MinFloat32InSlice(slice []float32) (float32, error) {
 	return min, nil
 }
 
-func MinFloat32WithDefault(slice []float32, d float32) float32 {
+func MinFloat32WithDefault(d float32, slice ...float32) float32 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -301,7 +301,7 @@ func MinFloat64InSlice(slice []float64) (float64, error) {
 	return min, nil
 }
 
-func MinFloat64WithDefault(slice []float64, d float64) float64 {
+func MinFloat64WithDefault(d float64, slice ...float64) float64 {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]
@@ -327,7 +327,7 @@ func MinTimeInSlice(slice []time.Time) (time.Time, error) {
 	return min, nil
 }
 
-func MinTimeWithDefault(slice []time.Time, d time.Time) time.Time {
+func MinTimeWithDefault(d time.Time, slice ...time.Time) time.Time {
 	min := d
 	if len(slice) != 0 {
 		min = slice[0]

@@ -15,7 +15,7 @@ func MaxIntInSlice(slice []int) (int, error) {
 	return max, nil
 }
 
-func MaxIntWithDefault(slice []int, d int) int {
+func MaxIntWithDefault(d int, slice ...int) int {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -41,7 +41,7 @@ func MaxInt8InSlice(slice []int8) (int8, error) {
 	return max, nil
 }
 
-func MaxInt8WithDefault(slice []int8, d int8) int8 {
+func MaxInt8WithDefault(d int8, slice ...int8) int8 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -67,7 +67,7 @@ func MaxInt16InSlice(slice []int16) (int16, error) {
 	return max, nil
 }
 
-func MaxInt16WithDefault(slice []int16, d int16) int16 {
+func MaxInt16WithDefault(d int16, slice ...int16) int16 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -93,7 +93,7 @@ func MaxInt32InSlice(slice []int32) (int32, error) {
 	return max, nil
 }
 
-func MaxInt32WithDefault(slice []int32, d int32) int32 {
+func MaxInt32WithDefault(d int32, slice ...int32) int32 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -119,7 +119,7 @@ func MaxInt64InSlice(slice []int64) (int64, error) {
 	return max, nil
 }
 
-func MaxInt64WithDefault(slice []int64, d int64) int64 {
+func MaxInt64WithDefault(d int64, slice ...int64) int64 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -145,7 +145,7 @@ func MaxUintInSlice(slice []uint) (uint, error) {
 	return max, nil
 }
 
-func MaxUintWithDefault(slice []uint, d uint) uint {
+func MaxUintWithDefault(d uint, slice ...uint) uint {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -171,7 +171,7 @@ func MaxUint8InSlice(slice []uint8) (uint8, error) {
 	return max, nil
 }
 
-func MaxUint8WithDefault(slice []uint8, d uint8) uint8 {
+func MaxUint8WithDefault(d uint8, slice ...uint8) uint8 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -197,7 +197,7 @@ func MaxUint16InSlice(slice []uint16) (uint16, error) {
 	return max, nil
 }
 
-func MaxUint16WithDefault(slice []uint16, d uint16) uint16 {
+func MaxUint16WithDefault(d uint16, slice ...uint16) uint16 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -223,7 +223,7 @@ func MaxUint32InSlice(slice []uint32) (uint32, error) {
 	return max, nil
 }
 
-func MaxUint32WithDefault(slice []uint32, d uint32) uint32 {
+func MaxUint32WithDefault(d uint32, slice ...uint32) uint32 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -249,7 +249,7 @@ func MaxUint64InSlice(slice []uint64) (uint64, error) {
 	return max, nil
 }
 
-func MaxUint64WithDefault(slice []uint64, d uint64) uint64 {
+func MaxUint64WithDefault(d uint64, slice ...uint64) uint64 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -275,7 +275,7 @@ func MaxFloat32InSlice(slice []float32) (float32, error) {
 	return max, nil
 }
 
-func MaxFloat32WithDefault(slice []float32, d float32) float32 {
+func MaxFloat32WithDefault(d float32, slice ...float32) float32 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -301,7 +301,7 @@ func MaxFloat64InSlice(slice []float64) (float64, error) {
 	return max, nil
 }
 
-func MaxFloat64WithDefault(slice []float64, d float64) float64 {
+func MaxFloat64WithDefault(d float64, slice ...float64) float64 {
 	max := d
 	if len(slice) != 0 {
 		max = slice[0]
@@ -314,8 +314,8 @@ func MaxFloat64WithDefault(slice []float64, d float64) float64 {
 	return max
 }
 
-func MaxTimeWithDefault(slice []time.Time, t time.Time) time.Time {
-	max := t
+func MaxTimeWithDefault(d time.Time, slice ...time.Time) time.Time {
+	max := d
 	if len(slice) != 0 {
 		max = slice[0]
 	}

@@ -45,23 +45,23 @@ func TestMinInt(t *testing.T) {
 
 func TestMinIntWithDefault(t *testing.T) {
 	var r int
-	r = MinIntWithDefault([]int{}, 3)
+	r = MinIntWithDefault(3, []int{}...)
 	if r != 3 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MinIntWithDefault(nil, 3)
+	r = MinIntWithDefault(3)
 	if r != 3 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MinIntWithDefault([]int{1, 2}, 3)
+	r = MinIntWithDefault(3, 1, 2)
 	if r != 1 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MinIntWithDefault([]int{4, 5}, 3)
+	r = MinIntWithDefault(3, 4, 5)
 	if r != 4 {
 		t.Fatalf("bad result: %v", r)
 	}
-	r = MinIntWithDefault([]int{-4, -5}, 3)
+	r = MinIntWithDefault(3, -4, -5)
 	if r != -5 {
 		t.Fatalf("bad result: %v", r)
 	}
